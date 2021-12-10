@@ -1,6 +1,6 @@
 import './ConvertTo.css'
 import { useState, useEffect } from 'react'
-import convert from '../helpers/exchangeRaterConverter'
+import convert from '../helpers/exchangeRateConverter'
 
 function ConvertTo (props) {
   const [toValue, setToValue] = useState(1)

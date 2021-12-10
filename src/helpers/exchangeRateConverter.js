@@ -4,11 +4,11 @@ const isDecimalNumber = (number) => {
 
 const truncateAtTwoDecimalPlaces = (number) => {
   const regex = new RegExp('^-?\\d+(?:.\\d{0,' + (2 || -1) + '})?')
-  return number.toString().match(regex)[0]
+  return +number.toString().match(regex)[0]
 }
 
 const convert = ({ rates, fromRate, fromValue, toRate }) => {
-  if (!rates[toRate] || !rates[fromRate] || fromValue === 0) {
+  if (!rates || !rates[toRate] || !rates[fromRate] || fromValue === 0) {
     return 0
   }
 
