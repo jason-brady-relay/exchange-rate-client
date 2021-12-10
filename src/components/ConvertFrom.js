@@ -1,3 +1,4 @@
+import './ConvertFrom.css'
 import { useState } from 'react'
 import ConvertTo from './ConvertTo'
 
@@ -9,8 +10,8 @@ function ConvertFrom (props) {
   return (
     <div className='Container'>
       <div className='ConvertFrom'>
-        <input id='fromValue' className='InputValue' type='number' value={fromValue} onChange={e => setFromValue(e.target.value)} />
-        <select id='fromRate' className='SelectRate' value={fromRate} onChange={e => setFromRate(e.target.value)}>
+        <input className='InputValue' type='number' value={fromValue} onChange={e => setFromValue(e.target.value)} />
+        <select className='SelectRate' value={fromRate} onChange={e => setFromRate(e.target.value)}>
           {Object.keys(rates).map(rate => (
             <option key={rate} value={rate}>{rate}</option>
           ))}

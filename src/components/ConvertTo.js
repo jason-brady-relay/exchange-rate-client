@@ -1,3 +1,4 @@
+import './ConvertTo.css'
 import { useState, useEffect } from 'react'
 import convert from '../helpers/exchangeRaterConverter'
 
@@ -12,8 +13,8 @@ function ConvertTo (props) {
 
   return (
     <div className='ConvertTo'>
-      <input id='toValue' className='InputValue' type='number' value={toValue} readOnly />
-      <select id='toRate' className='SelectRate' value={toRate} onChange={e => setToRate(e.target.value)}>
+      <input className='InputValue' type='number' value={toValue} readOnly />
+      <select className='SelectRate' value={toRate} onChange={e => setToRate(e.target.value)}>
         {Object.keys(rates).map(rate => (
           <option key={rate} value={rate}>{rate}</option>
         ))}
